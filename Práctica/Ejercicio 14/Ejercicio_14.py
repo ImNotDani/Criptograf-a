@@ -25,7 +25,6 @@ else:
 
 
 salt = bytes.fromhex("e43bb4067cbcfab3bec54437b84bef4623e345682d89de9948fbb0afedc461a3")
-master_secret = secrets.token_bytes(64)
 key1 = HKDF(clave, 32, salt, SHA512, 1)
 key1_b64 = base64.b64encode(key1).decode()
 
